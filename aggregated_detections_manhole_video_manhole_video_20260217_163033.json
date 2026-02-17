@@ -1,0 +1,46 @@
+{
+  "source_file": "detections_manhole_video_manhole_video_20260217_163033.json",
+  "video": "manhole_video.webm",
+  "model": "best.pt",
+  "iou_threshold": 0.5,
+  "total_raw_detections": 5,
+  "total_issues": 3,
+  "issues": [
+    {
+      "issue_id": "OPE_001",
+      "type": "open_manhole",
+      "class_id": 3,
+      "first_seen": 2.0,
+      "last_seen": 3.0,
+      "frames_detected": 2,
+      "avg_area_pixels": 3965.5,
+      "max_area_pixels": 4304,
+      "avg_confidence": 0.5443,
+      "max_confidence": 0.5647
+    },
+    {
+      "issue_id": "OPE_002",
+      "type": "open_manhole",
+      "class_id": 3,
+      "first_seen": 3.0,
+      "last_seen": 3.0,
+      "frames_detected": 1,
+      "avg_area_pixels": 2619.0,
+      "max_area_pixels": 2619,
+      "avg_confidence": 0.492,
+      "max_confidence": 0.492
+    },
+    {
+      "issue_id": "OPE_003",
+      "type": "open_manhole",
+      "class_id": 3,
+      "first_seen": 5.0,
+      "last_seen": 6.0,
+      "frames_detected": 2,
+      "avg_area_pixels": 14417.0,
+      "max_area_pixels": 17753,
+      "avg_confidence": 0.6049,
+      "max_confidence": 0.6516
+    }
+  ]
+}
