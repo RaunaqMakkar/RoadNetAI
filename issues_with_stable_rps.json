@@ -1,0 +1,65 @@
+{
+  "total_issues": 4,
+  "issues": [
+    {
+      "issue_id": "OPE_001",
+      "type": "open_manhole",
+      "class_id": 3,
+      "first_seen": 2.0,
+      "last_seen": 5.0,
+      "frames_detected": 4,
+      "avg_area_pixels": 18566.5,
+      "max_area_pixels": 23132,
+      "avg_confidence": 0.6653,
+      "max_confidence": 0.8552,
+      "rps_score": 69.27,
+      "priority": "High",
+      "recommended_action": "Repair within 3 days"
+    },
+    {
+      "issue_id": "OPE_002",
+      "type": "open_manhole",
+      "class_id": 3,
+      "first_seen": 7.0,
+      "last_seen": 19.0,
+      "frames_detected": 13,
+      "avg_area_pixels": 56159.29,
+      "max_area_pixels": 92300,
+      "avg_confidence": 0.7049,
+      "max_confidence": 0.8989,
+      "rps_score": 83.6,
+      "priority": "High",
+      "recommended_action": "Repair within 3 days"
+    },
+    {
+      "issue_id": "OPE_003",
+      "type": "open_manhole",
+      "class_id": 3,
+      "first_seen": 12.0,
+      "last_seen": 16.0,
+      "frames_detected": 4,
+      "avg_area_pixels": 106777.75,
+      "max_area_pixels": 121669,
+      "avg_confidence": 0.5815,
+      "max_confidence": 0.801,
+      "rps_score": 71.35,
+      "priority": "High",
+      "recommended_action": "Repair within 3 days"
+    },
+    {
+      "issue_id": "MAN_004",
+      "type": "manhole",
+      "class_id": 2,
+      "first_seen": 12.0,
+      "last_seen": 19.0,
+      "frames_detected": 2,
+      "avg_area_pixels": 48091.5,
+      "max_area_pixels": 54146,
+      "avg_confidence": 0.4631,
+      "max_confidence": 0.5086,
+      "rps_score": 54.82,
+      "priority": "Moderate",
+      "recommended_action": "Schedule maintenance"
+    }
+  ]
+}
