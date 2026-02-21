@@ -1,0 +1,152 @@
+{
+  "video": "road_video.mp4",
+  "model": "best.pt",
+  "fps": 25.0,
+  "frame_count": 570,
+  "sample_every_seconds": 1.0,
+  "confidence_threshold": 0.4,
+  "device": "cpu",
+  "total_detections": 10,
+  "detections": [
+    {
+      "class": "pothole",
+      "class_id": 0,
+      "confidence": 0.800782322883606,
+      "bbox_xyxy": [
+        586.3397827148438,
+        122.00630950927734,
+        700.8233032226562,
+        183.13101196289062
+      ],
+      "mask_area_pixels": 3550,
+      "timestamp_seconds": 1.0,
+      "frame_number": 25
+    },
+    {
+      "class": "pothole",
+      "class_id": 0,
+      "confidence": 0.7792987823486328,
+      "bbox_xyxy": [
+        498.3106384277344,
+        8.535544395446777,
+        554.6304931640625,
+        40.2975959777832
+      ],
+      "mask_area_pixels": 916,
+      "timestamp_seconds": 1.0,
+      "frame_number": 25
+    },
+    {
+      "class": "pothole",
+      "class_id": 0,
+      "confidence": 0.7000598907470703,
+      "bbox_xyxy": [
+        213.7635498046875,
+        66.38961029052734,
+        278.4684753417969,
+        132.9361114501953
+      ],
+      "mask_area_pixels": 2410,
+      "timestamp_seconds": 1.0,
+      "frame_number": 25
+    },
+    {
+      "class": "pothole",
+      "class_id": 0,
+      "confidence": 0.5415681600570679,
+      "bbox_xyxy": [
+        213.5017852783203,
+        281.79071044921875,
+        335.56964111328125,
+        390.1971740722656
+      ],
+      "mask_area_pixels": 6923,
+      "timestamp_seconds": 1.0,
+      "frame_number": 25
+    },
+    {
+      "class": "road_crack",
+      "class_id": 1,
+      "confidence": 0.5262572169303894,
+      "bbox_xyxy": [
+        287.21307373046875,
+        1.5021240711212158,
+        333.3779296875,
+        431.3215637207031
+      ],
+      "mask_area_pixels": 3921,
+      "timestamp_seconds": 8.0,
+      "frame_number": 200
+    },
+    {
+      "class": "pothole",
+      "class_id": 0,
+      "confidence": 0.601231575012207,
+      "bbox_xyxy": [
+        15.64054012298584,
+        0.0,
+        309.2224426269531,
+        431.0923156738281
+      ],
+      "mask_area_pixels": 57795,
+      "timestamp_seconds": 12.0,
+      "frame_number": 300
+    },
+    {
+      "class": "pothole",
+      "class_id": 0,
+      "confidence": 0.6040958166122437,
+      "bbox_xyxy": [
+        388.7533874511719,
+        8.231470108032227,
+        431.61053466796875,
+        52.111854553222656
+      ],
+      "mask_area_pixels": 1270,
+      "timestamp_seconds": 17.0,
+      "frame_number": 425
+    },
+    {
+      "class": "pothole",
+      "class_id": 0,
+      "confidence": 0.7282669544219971,
+      "bbox_xyxy": [
+        451.6185302734375,
+        28.499561309814453,
+        489.180908203125,
+        52.34745788574219
+      ],
+      "mask_area_pixels": 644,
+      "timestamp_seconds": 19.0,
+      "frame_number": 475
+    },
+    {
+      "class": "pothole",
+      "class_id": 0,
+      "confidence": 0.7340719699859619,
+      "bbox_xyxy": [
+        439.6278991699219,
+        4.565921306610107,
+        497.08917236328125,
+        36.554283142089844
+      ],
+      "mask_area_pixels": 1131,
+      "timestamp_seconds": 20.0,
+      "frame_number": 500
+    },
+    {
+      "class": "pothole",
+      "class_id": 0,
+      "confidence": 0.9038445353507996,
+      "bbox_xyxy": [
+        503.383544921875,
+        170.75563049316406,
+        767.708740234375,
+        431.8670349121094
+      ],
+      "mask_area_pixels": 36713,
+      "timestamp_seconds": 21.0,
+      "frame_number": 525
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "video": "manhole_video.webm",
+  "model": "best.pt",
+  "fps": 50.0,
+  "frame_count": 342,
+  "sample_every_seconds": 1.0,
+  "confidence_threshold": 0.4,
+  "device": "cpu",
+  "total_detections": 7,
+  "detections": [
+    {
+      "class": "open_manhole",
+      "class_id": 3,
+      "confidence": 0.6891893744468689,
+      "bbox_xyxy": [
+        485.6029357910156,
+        361.67138671875,
+        575.7537231445312,
+        482.3500671386719
+      ],
+      "mask_area_pixels": 4369,
+      "timestamp_seconds": 2.0,
+      "frame_number": 100
+    },
+    {
+      "class": "open_manhole",
+      "class_id": 3,
+      "confidence": 0.5332451462745667,
+      "bbox_xyxy": [
+        325.6094055175781,
+        374.66314697265625,
+        407.7195129394531,
+        482.5179443359375
+      ],
+      "mask_area_pixels": 3031,
+      "timestamp_seconds": 2.0,
+      "frame_number": 100
+    },
+    {
+      "class": "open_manhole",
+      "class_id": 3,
+      "confidence": 0.6816495656967163,
+      "bbox_xyxy": [
+        323.12939453125,
+        371.7388916015625,
+        576.3759765625,
+        501.0521240234375
+      ],
+      "mask_area_pixels": 15177,
+      "timestamp_seconds": 3.0,
+      "frame_number": 150
+    },
+    {
+      "class": "open_manhole",
+      "class_id": 3,
+      "confidence": 0.5107120871543884,
+      "bbox_xyxy": [
+        326.4451599121094,
+        380.9008483886719,
+        402.62969970703125,
+        486.61474609375
+      ],
+      "mask_area_pixels": 2807,
+      "timestamp_seconds": 3.0,
+      "frame_number": 150
+    },
+    {
+      "class": "manhole",
+      "class_id": 2,
+      "confidence": 0.41127321124076843,
+      "bbox_xyxy": [
+        0.0,
+        248.46038818359375,
+        252.17648315429688,
+        460.6846618652344
+      ],
+      "mask_area_pixels": 21585,
+      "timestamp_seconds": 3.0,
+      "frame_number": 150
+    },
+    {
+      "class": "open_manhole",
+      "class_id": 3,
+      "confidence": 0.7493483424186707,
+      "bbox_xyxy": [
+        340.3396911621094,
+        377.6916198730469,
+        591.0948486328125,
+        504.5052185058594
+      ],
+      "mask_area_pixels": 12986,
+      "timestamp_seconds": 5.0,
+      "frame_number": 250
+    },
+    {
+      "class": "open_manhole",
+      "class_id": 3,
+      "confidence": 0.8492343425750732,
+      "bbox_xyxy": [
+        311.15386962890625,
+        403.0858459472656,
+        601.223876953125,
+        504.8644714355469
+      ],
+      "mask_area_pixels": 13640,
+      "timestamp_seconds": 6.0,
+      "frame_number": 300
+    }
+  ]
+}
