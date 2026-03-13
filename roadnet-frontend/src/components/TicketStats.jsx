@@ -1,25 +1,33 @@
-function TicketStats({ total, data }) {
-    const criticalCount = data.filter((t) => t.priority === "Critical").length;
-    const verifiedCount = data.filter((t) => t.is_verified).length;
-    const verifiedRate = total > 0 ? ((verifiedCount / Math.min(total, data.length)) * 100).toFixed(1) : "0.0";
+function TicketStats({ stats }) {
+    const total = stats?.total_tickets || 0;
+    const priorityBreakdown = stats?.breakdown_by_priority || {};
+    const statusBreakdown = stats?.breakdown_by_status || {};
+    const avgRps = stats?.avg_rps_score || 0;
+
+    const critical = priorityBreakdown["Critical"] || 0;
+    const high = priorityBreakdown["High"] || 0;
+    const openCount = statusBreakdown["Open"] || 0;
+    const inProgress = statusBreakdown["In Progress"] || 0;
+    const closed = statusBreakdown["Closed"] || 0;
+    const activeCount = openCount + inProgress;
 
     return (
         <div className="tickets-stats">
             <div className="ticket-stat-card">
-                <div className="ticket-stat-title">TOTAL OPEN TICKETS</div>
+                <div className="ticket-stat-title">TOTAL TICKETS</div>
                 <div className="ticket-stat-value">{total.toLocaleString()}</div>
             </div>
             <div className="ticket-stat-card">
-                <div className="ticket-stat-title">CRITICAL RPS ISSUES</div>
-                <div className="ticket-stat-value red">{criticalCount}</div>
+                <div className="ticket-stat-title">CRITICAL ISSUES</div>
+                <div className="ticket-stat-value red">{(critical + high).toLocaleString()}</div>
             </div>
             <div className="ticket-stat-card">
-                <div className="ticket-stat-title">AVG. RESOLUTION TIME</div>
-                <div className="ticket-stat-value">4.2 Days</div>
+                <div className="ticket-stat-title">OPEN / ACTIVE</div>
+                <div className="ticket-stat-value">{activeCount.toLocaleString()}</div>
             </div>
             <div className="ticket-stat-card">
-                <div className="ticket-stat-title">AI VERIFIED RATE</div>
-                <div className="ticket-stat-value green">{verifiedRate}%</div>
+                <div className="ticket-stat-title">AVG RPS SCORE</div>
+                <div className="ticket-stat-value green">{avgRps}</div>
             </div>
         </div>
     );

@@ -1,6 +1,6 @@
 import TicketRow from "./TicketRow";
 
-function TicketTable({ tickets }) {
+function TicketTable({ tickets, onView, onAssign, onClose }) {
     if (!tickets || tickets.length === 0) {
         return <div className="tickets-empty">No tickets found.</div>;
     }
@@ -17,13 +17,19 @@ function TicketTable({ tickets }) {
                     <th>DEPT.</th>
                     <th>STATUS</th>
                     <th>TIMESTAMP</th>
-                    <th>VERIFIED</th>
+                    <th>SOURCE</th>
                     <th>ACTIONS</th>
                 </tr>
             </thead>
             <tbody>
                 {tickets.map((t, i) => (
-                    <TicketRow key={t.ticket_id || i} ticket={t} />
+                    <TicketRow
+                        key={t.ticket_id || i}
+                        ticket={t}
+                        onView={onView}
+                        onAssign={onAssign}
+                        onClose={onClose}
+                    />
                 ))}
             </tbody>
         </table>
