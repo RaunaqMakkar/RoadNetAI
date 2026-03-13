@@ -11,12 +11,19 @@ import "../styles/Analytics.css";
 
 function Analytics() {
     const [stats, setStats] = useState(null);
+    const [tickets, setTickets] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        API.get("/stats")
+        const statsPromise = API.get("/stats")
             .then((res) => setStats(res.data))
-            .catch(() => setStats(null))
+            .catch(() => setStats(null));
+
+        const ticketsPromise = API.get("/tickets", { params: { page: 1, limit: 100 } })
+            .then((res) => setTickets(res.data.data || []))
+            .catch(() => setTickets([]));
+
+        Promise.all([statsPromise, ticketsPromise])
             .finally(() => setLoading(false));
     }, []);
 
@@ -31,6 +38,18 @@ function Analytics() {
     const total = stats?.total_tickets || 0;
     const avgRps = stats?.avg_rps_score || 0;
     const priorityBreakdown = stats?.breakdown_by_priority || {};
+    const statusBreakdown = stats?.breakdown_by_status || {};
+    const typeBreakdown = stats?.breakdown_by_type || {};
+
+    // Compute zone breakdown from ticket data
+    const zoneBreakdown = {};
+    const deptBreakdown = {};
+    tickets.forEach((t) => {
+        const zone = t.zone || "Unknown";
+        zoneBreakdown[zone] = (zoneBreakdown[zone] || 0) + 1;
+        const dept = t.assigned_department || "Unassigned";
+        deptBreakdown[dept] = (deptBreakdown[dept] || 0) + 1;
+    });
 
     return (
         <div className="analytics-page">
@@ -53,27 +72,27 @@ function Analytics() {
             </div>
 
             {/* KPI Cards */}
-            <AnalyticsStats stats={stats} />
+            <AnalyticsStats stats={stats} tickets={tickets} />
 
             {/* Charts Row: Line + Donut */}
             <div className="analytics-charts-row">
-                <IssuesOverTimeChart total={total} />
+                <IssuesOverTimeChart tickets={tickets} total={total} />
                 <PriorityBreakdownChart breakdown={priorityBreakdown} total={total} />
             </div>
 
             {/* Bottom Row: Zones + Departments + RPS */}
             <div className="analytics-bottom-row">
-                <ZoneIssues total={total} />
-                <DepartmentWorkload />
-                <RPSTrendChart avgRps={avgRps} />
+                <ZoneIssues zoneBreakdown={zoneBreakdown} />
+                <DepartmentWorkload deptBreakdown={deptBreakdown} total={total} />
+                <RPSTrendChart tickets={tickets} avgRps={avgRps} />
             </div>
 
             {/* Predictive Insights */}
-            <PredictiveInsights />
+            <PredictiveInsights stats={stats} tickets={tickets} />
 
             {/* Footer */}
             <div className="analytics-footer">
-                © 2024 RoadNet.AI Infrastructure Intelligence Engine. All data is encrypted and compliant with municipal standards.
+                © 2026 RoadNet.AI Infrastructure Intelligence Engine. All data is encrypted and compliant with municipal standards.
             </div>
         </div>
     );
