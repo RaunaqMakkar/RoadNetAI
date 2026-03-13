@@ -1,0 +1,32 @@
+# repo root .gitignore
+
+# model/data artifacts
+weights/
+results/
+all videos and detections old/
+
+# generated uploads
+backend/temp_uploads/
+
+# Python / JS caches if they ever appear at root
+**/__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# environment files
+**/.env
+**/.env.*
+!**/.env.example
+
+# media / generated analytics artifacts
+*.mp4
+*.webm
+*.avi
+*.mov
+detections_*.json
+aggregated_detections_*.json
+issues_with_stable_rps.json
+tickets.json
